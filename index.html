@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра "Пара"</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="container-body">
+
+  <header class="header">
+    <h1 class="title">Игра "Найди пару"  (картины великих художников)</h1>
+  </header>
+  <section class="container">
+    <div class="rules">
+
+      <p>Цель игры: <br> Открыть все пары одинаковых карточек и вспомнить великих художников</p>
+      <p>Правила игры: <br> Выберите две карточки. <br> Если карточки одинаковые, они составляют пару и остаются открытыми до конца игры. <br>  Если карточки разные , они закрываются, как только откроется следующая карточка.</p>
+
+      <label for="numsCards">Введите четное количество карточек <br> от 4 до 16</label>
+      <input class="rules__input" type="number" id="numsCards" placeholder="минимум 4 карты" autofocus max="32" min="4"
+        step="2">
+      <div class="clock">:00</div>
+      <button class="rules-btn">Начать игру!</button>
+      <div class="win"></div>
+
+    </div>
+
+    <ul class="table">
+
+    </ul>
+
+  </section>
+</body>
+
+</html>

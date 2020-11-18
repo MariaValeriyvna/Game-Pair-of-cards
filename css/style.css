@@ -1,0 +1,179 @@
+/* comfortaa-300 - latin_cyrillic */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/comfortaa-v29-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/comfortaa-v29-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* comfortaa-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/comfortaa-v29-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/comfortaa-v29-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* comfortaa-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/comfortaa-v29-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/comfortaa-v29-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* comfortaa-600 - latin_cyrillic */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/comfortaa-v29-latin_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/comfortaa-v29-latin_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* comfortaa-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/comfortaa-v29-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/comfortaa-v29-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --widthCard: 150px;
+  --heightCard: 220px;
+  --allCards: 32;
+}
+header{
+  text-align: center;
+}
+.title {
+  margin-bottom: 5px;
+  font-family: Comfortaa, sans-serif;
+  font-size: 50px;
+  color: rgb(9, 69, 119);
+}
+.container-body {
+ padding: 0 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(89, 240, 27, 1) 0%,
+    rgba(52, 175, 201, 1) 46%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  box-sizing: border-box;
+  font-family: Comfortaa, sans-serif;
+  color: rgb(9, 69, 119);
+}
+.container {
+  display: flex;
+  max-width: 1920px;
+  margin: 10px auto;
+
+}
+.rules {
+  min-width: 290px;
+  width: 18%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.rules__input {
+  width: 90%;
+  margin: 20px auto;
+  padding: 10px;
+  color: rgb(9, 69, 119);
+  border: 1px solid transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+.rules__input:focus,
+.rules__input:hover {
+  outline: none;
+  border: 1px solid rgb(9, 69, 119);
+}
+.table {
+  width: 80%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  height: fit-content;
+}
+
+.card {
+  position: relative;
+  width: var(--widthCard);
+  height: var(--heightCard);
+  margin: 10px;
+  background-image: url(../img/card.jpg);
+  background-size: cover;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 2s;
+}
+.card:hover,
+.card:focus {
+  outline: none;
+  transform: scale(1.1);
+}
+.rules__win {
+  font-size: 20px;
+}
+.rules-btn {
+  width: 90%;
+  padding: 10px;
+  margin: 0 auto;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: rgb(9, 69, 119);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s;
+}
+.rules-btn:focus,
+.rules-btn:hover {
+  outline: none;
+  background-color: rgba(52, 175, 201, 1);
+  border: 2px solid white;
+}
+.clock {
+  margin: 5px auto;
+  font-size: 20px;
+}
+.win {
+  height: 100px;
+  text-align: center;
+}
+.descrip {
+  position: absolute;
+  margin: 0;
+  padding: 5px;
+  bottom: 0;
+  color: white;
+  background-color: rgba(52, 175, 201, 1);
+  opacity: 0;
+  text-align: center;
+  animation: fade 6s ease-in-out;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
